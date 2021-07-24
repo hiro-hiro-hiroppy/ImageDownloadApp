@@ -16,15 +16,19 @@ namespace ImageDownloadApp
         {
             using (WebClient client = new WebClient())
             {
+                int downloadStartPageNo = 1;
+
                 for(int i = ir.StartPageNo; i <= ir.EndPageNo; i++)
                 {
                     string imageName = i.ToString() + ir.FileExtension;
                     string imageUrl = @Path.Combine(ir.DownloadSourceFolder, imageName);
 
-                    string downloadImageName = ir.DownloadFileStartName + i.ToString() + ir.FileExtension;
+                    string downloadImageName = ir.DownloadFileStartName + downloadStartPageNo.ToString() + ir.FileExtension;
                     string downloadImageUrl = @Path.Combine(ir.DownloadFolder, downloadImageName);
 
                     client.DownloadFile(new Uri(imageUrl), downloadImageUrl);
+
+                    downloadStartPageNo++;
                 }
             }
 

@@ -21,9 +21,6 @@ namespace ImageDownloadApp
                 Console.WriteLine("エラー発生：");
                 Console.WriteLine(ex.ToString());
                 Console.WriteLine("ダウンロード失敗");
-            }
-            finally
-            {
                 Console.ReadKey();
             }
 
