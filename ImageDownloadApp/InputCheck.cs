@@ -24,7 +24,7 @@ namespace ImageDownloadApp
                 parseValue = value.ToString();
                 parseResult = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 parseValue = defaultValue;
             }
