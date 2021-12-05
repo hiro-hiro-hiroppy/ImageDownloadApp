@@ -82,19 +82,5 @@ namespace ImageDownloadApp
 
             return result;
         }
-
-        //public static bool checkWebsite(string URL)
-        //{
-        //    try
-        //    {
-        //        WebClient wc = new WebClient();
-        //        string HTMLSource = wc.DownloadFile(new Uri(URL));
-        //        return true;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return false;
-        //    }
-        //}
     }
 }
