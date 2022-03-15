@@ -88,12 +88,13 @@ namespace ImageDownloadApp
                 }
             }
 
-            Console.WriteLine("終了ページ番号は?(デフォルトは最終ページまで)");
+            Console.WriteLine("終了ページ番号は?");
             var endPageNo = Console.ReadLine();
             (bool, int) check3 = InputCheck.TryParseInt(endPageNo, 0);
             if(check3.Item2 == 0 && endPageNo == "")
             {
-                ir.EndPageNo = null;
+                //ir.EndPageNo = null;
+                throw new Exception("ちゃんと入力してください");
             }
             else
             {

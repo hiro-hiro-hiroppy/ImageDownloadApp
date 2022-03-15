@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace ImageDownloadApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             try
             {
                 Console.WriteLine("画像の保存を開始します。");
 
                 InputReadModel ir = InputRead.SetInputRead();
-                Download.DownLoadImages(ir);
+                await Download.DownLoadImages(ir);
 
                 Console.WriteLine("ダウンロード成功");
             }
